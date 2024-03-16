@@ -103,8 +103,9 @@ const Project= () => {
     
     const Container = styled.div`
     p{
-        height: 80%;
-    }
+    height: 80%;
+    color: white;
+}
     font-size: .8rem;
     padding: 1rem;
     width: 70vw;

@@ -12,11 +12,11 @@ import Projects from "./Pages/Projects";
 
 export default function App() {
   return (
-    <Wrapper>
-      <Spline
-        className="spline"
-        scene="https://prod.spline.design/cQHT2UR2F0lE0EWp/scene.splinecode"
-        />
+    // <Wrapper>
+    //   <Spline
+    //     className="spline"
+    //     scene="https://prod.spline.design/cQHT2UR2F0lE0EWp/scene.splinecode"
+    //     />
       <Container>
         <Toaster/>
         <BrowserRouter>
@@ -39,7 +39,7 @@ export default function App() {
           </Routes>
         </BrowserRouter>
       </Container>
-    </Wrapper>
+    // </Wrapper>
   );
 }
 

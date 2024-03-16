@@ -68,7 +68,8 @@ const Tool = () => {
 
 const Container = styled.div`
 p{
-    height: 90%;
+    height: 80%;
+    color: white;
 }
 font-size: .8rem;
 padding: 1rem;
