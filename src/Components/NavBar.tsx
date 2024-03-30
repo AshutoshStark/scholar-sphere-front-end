@@ -38,7 +38,7 @@ const NavBar = () => {
               <Link to={`/res`}>Resources</Link>
             </div>}
           <Link to={'/Proj'}>
-            Courses
+            Projects
           </Link>
         </nav>
     </Navbar>
