@@ -52,10 +52,10 @@ p{
     height: 80%;
     color: white;
 }
-font-size: .8rem;
+font-size: 1rem;
 padding: 1rem;
 width: 70vw;
-height: 65vh;
+height: 60vh;
 background: rgba( 144, 19, 254, 0.6 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 8.5px );
