@@ -19,7 +19,7 @@ const UserWelcome = () => {
             
             In terms of gameplay, there is a growing emphasis on player-centric design. Developers are increasingly focused on creating games that are tailored to the interests and preferences of their target audience. This includes incorporating personalized content, adaptive difficulty levels, and social features.<br/>
             
-            Cross-platform compatibility has also become increasingly important, as players expect to be able to play their favorite games on multiple devices. Developers are leveraging technologies such as cloud gaming and cross-play to ensure that their games are accessible to as wide an audience as possible.<br/>
+            Cross-platform compatibility has also become increasingly important, as players expect to be able to play  their favorite games on multiple devices. Developers are leveraging technologies such as cloud gaming and cross-play to ensure that their games are accessible to as wide an audience as possible.<br/>
             
             Overall, game development in 2023 is characterized by a focus on innovation, player engagement, and cross-platform accessibility. As technology continues to advance, we can expect to see even more groundbreaking and immersive gaming experiences in the years to come.<br/>`],
             speed: 1,
@@ -36,7 +36,7 @@ p{
     height: 80%;
     color: white;
 }
-font-size: .8rem;
+font-size: 1rem;
 padding: 1rem;
 width: 70vw;
 height: 65vh;
