@@ -1,13 +1,53 @@
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
-import { Children, useEffect, useState } from 'react';
+import { Children, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components'
 import React from 'react'
 import TypeIt from 'typeit-react';
+import WavesurferPlayer from '@wavesurfer/react';
 
 
 const UserWelcome = () => {
+  const [toggle,setToggle]=useState<boolean>(true)
+
+  const containerRef = useRef(null)
+
+  // const { wavesurfer, isReady, isPlaying, currentTime } = useWavesurfer({
+  //   container: containerRef,
+  //   url: 'assets/home.mp3',
+  //   waveColor: 'red',
+  //   height: 0,
+  // })
+
+  const [wavesurfer, setWavesurfer] = useState<any>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const onReady = (ws:any) => {
+    setWavesurfer(ws)
+    setIsPlaying(false)
+  }
+
+  const onPlayPause = () => {
+    wavesurfer && wavesurfer.playPause()
+  }
+
   return (
     <Container>
+      <WavesurferPlayer
+        height={0}
+        waveColor="violet"
+        url= {toggle ? "assets/home.mp3" : "assets/homeHindi.mp3"}
+        onReady={onReady}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      />
+      <div className='speech'>
+  <button onClick={()=>setToggle(!toggle)}>
+        {toggle ? 'English' : 'Hindi'}
+      </button>
+  <button onClick={onPlayPause}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+</div>
     <p className='heading_style'>WEB DEVELOPMENT: - </p>
     <TypeIt
     options={{
@@ -39,6 +79,25 @@ const UserWelcome = () => {
 }
 
 const Container = styled.div`
+
+.speech{
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  
+  button{
+    color:white;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+}
 
 p{
     height: 80%;
